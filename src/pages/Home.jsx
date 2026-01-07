@@ -343,7 +343,7 @@ const Home = () => {
             <Button onClick={handleResumeClick} primary>
               View & Download Resume <FaArrowRight />
             </Button>
-            <Button as="a" href="#services">
+            <Button as="a" href="#project">
               Explore Projects
             </Button>
           </ButtonContainer>
