@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { FaArrowRight, FaCode, FaServer, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaCode,
+  FaServer,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
 import styled, { keyframes } from "styled-components";
 
 const fadeInUp = keyframes`
@@ -18,7 +25,7 @@ const HomeContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; 
+  min-height: 100vh;
   background-color: transparent;
   position: relative;
   overflow: hidden;
@@ -143,8 +150,6 @@ const TechStack = styled.div`
   }
 `;
 
-
-
 const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -166,7 +171,10 @@ const Button = styled.button`
   color: ${(props) => (props.primary ? "#000000" : "var(--main-color)")};
   background: ${(props) =>
     props.primary ? "var(--main-color)" : "transparent"};
-  border: ${(props) => (props.primary ? "2px solid var(--main-color)" : "2px solid var(--main-color)")};
+  border: ${(props) =>
+    props.primary
+      ? "2px solid var(--main-color)"
+      : "2px solid var(--main-color)"};
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -220,9 +228,9 @@ const SocialMediaContainer = styled.div`
 
 const SocialLink = styled.a`
   display: flex;
-  margin-left:20px;
- 
-  margin-top:20px;
+  margin-left: 20px;
+
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
   width: 3rem;
@@ -252,7 +260,7 @@ const Home = () => {
 
   const handleResumeClick = () => {
     // Assuming resume file might need to be added or linked correctly
-    const fileUrl = "/BoyaShiva_Resume.pdf";
+    const fileUrl = "/FullStackShiva.pdf";
     window.open(fileUrl, "_blank");
   };
 
@@ -261,9 +269,7 @@ const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = [
-    "Full Stack Developer & Problem Solver"
-  ];
+  const roles = ["Full Stack Developer & Problem Solver"];
 
   useEffect(() => {
     const handleType = () => {
@@ -299,7 +305,13 @@ const Home = () => {
 
           <Subtitle>
             <span style={{ color: "var(--main-color)" }}>{text}</span>
-            <span style={{ borderLeft: "3px solid var(--main-color)", marginLeft: "5px", animation: "blink 0.7s infinite" }}></span>
+            <span
+              style={{
+                borderLeft: "3px solid var(--main-color)",
+                marginLeft: "5px",
+                animation: "blink 0.7s infinite",
+              }}
+            ></span>
           </Subtitle>
           <Description>
             I'm a passionate developer focused on creating{" "}
@@ -337,10 +349,18 @@ const Home = () => {
           </ButtonContainer>
 
           <SocialMediaContainer>
-            <SocialLink href="https://github.com/ShivaBoya" target="_blank" rel="noopener noreferrer">
+            <SocialLink
+              href="https://github.com/ShivaBoya"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com/in/boyashiva" target="_blank" rel="noopener noreferrer">
+            <SocialLink
+              href="https://www.linkedin.com/in/boyashiva"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin />
             </SocialLink>
             <SocialLink href="mailto:shivasiddu80@gmail.com">
@@ -357,7 +377,7 @@ const Home = () => {
           </div>
         </div>
       </ContentWrapper>
-    </HomeContainer >
+    </HomeContainer>
   );
 };
 
