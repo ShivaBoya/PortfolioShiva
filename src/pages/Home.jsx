@@ -372,7 +372,7 @@ const Home = () => {
         <div className="home-img">
           <div className="img-box">
             <div className="img-item">
-              <img src="/Port.jpg" alt="Boya Shiva" />
+              <img src="/Portfolio.png" alt="Boya Shiva" />
             </div>
           </div>
         </div>
